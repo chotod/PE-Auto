@@ -1,16 +1,16 @@
 <?php
  /**
  *
- * @package   [SITE NAME] Functionality
- * @author    Your Name <your_email@email.com>
+ * @package   PE Auto Functionality
+ * @author    Clara Ho <claraxinho@gmail.com>
  * @license   GPL-2.0+
- * @copyright 2015 Your Name or Company
+ * @copyright 2018 Clara Ho
  *
  * @wordpress-plugin
- * Plugin Name: [SITE NAME] Functionality
+ * Plugin Name: PE Auto Functionality
  * Description: This very important plugin contains all of the core functionality for this website so that it remains theme-independent.
  * Version:     1.0.0
- * Author:      Your Name
+ * Author:      Clara Ho
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
