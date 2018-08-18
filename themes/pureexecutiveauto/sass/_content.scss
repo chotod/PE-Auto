@@ -47,3 +47,73 @@
 .bypostauthor {
 	display: block;
 }
+
+/* Containers */
+
+.r-container {
+	padding: 25px 0 20px;
+}
+
+/* Shared Styling */
+
+.site-main {
+	margin-bottom: 4rem;
+}
+
+.centered {
+	text-align: center;
+}
+
+.divider {
+	width: 325px;
+    height: 100%;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	img {
+		@include img-fit;
+	}
+}
+
+.luxury-car-container {
+    width: 300px;
+	margin: 0 auto;
+}
+
+.bentley {
+    height: 200px;
+    background: url(../../assets/car-bentley.svg) no-repeat;
+    background-position: 12px 0;   
+}
+
+.wpcf7 {
+	input, textarea {
+		border-radius: 0;
+		background: $color__background-forms;
+		border: none;
+		width: 325px;
+		color: $color__accent-softwhite;
+		&:focus {
+			outline: none;
+			color: $color__accent-softwhite;
+		}
+	}
+	input {
+		height: 34px;
+	}
+	textarea {
+		margin-bottom: 1rem;
+	}
+	p {
+		margin: 0;
+	}
+	input[type=submit] {
+		box-shadow: none;
+    	width: 175px;
+    	text-shadow: none;
+    	height: 45px;
+    	background: transparent;
+    	border: 1px solid $color__accent-softwhite;
+		color: $color__accent-softwhite;
+		text-transform: uppercase;
+	}
+}

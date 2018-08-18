@@ -1,0 +1,54 @@
+.contact-map-container {
+    height: 280px;
+    img {
+        @include img-fit;   
+    }
+}
+
+.company-contact-container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    >div {
+        display: flex;
+    }
+    p {
+        margin: 0;
+    }
+    .address-title {
+        margin-bottom: 0.5rem;
+        color: $color__accent-gold;
+    }
+}
+
+.company-address-wrapper {
+    img {
+        align-self: flex-start;
+    }
+}
+
+.address-info-wrapper {
+    padding-top: 0.3rem;
+    img {
+        align-self: flex-start;
+    }
+}
+
+.address-info {
+    font-size: 14px;
+}
+
+.company-info {
+    margin-left: 0.5rem;
+}
+
+.company-telephone-wrapper {
+    a {
+        font-size: 18px;
+        margin-top: 0.5rem;
+        @include link-color-white;
+    }
+}

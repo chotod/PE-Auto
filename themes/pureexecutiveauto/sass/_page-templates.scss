@@ -2,4 +2,118 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Front page */
+/* Leasing & Application Shared */
+
+.page-template-Leasing, .page-template-application {
+    background: #FFF;
+}
+
+.page-title {
+    margin: 4rem 0 2rem;
+    font-size: 18px;
+    color: $color__background-body;
+    text-transform: uppercase;
+}
+
+.page-info-container {
+    margin-bottom: 2rem;
+    >div {
+        width: 320px;
+        margin: 0 auto;;
+        color: $color__background-body;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        padding: 30px 15px 15px;
+    } 
+    >div:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        background: $color__background-lightgrey;
+        z-index: -1;
+        -webkit-transform: skew(0deg, 6deg);
+        -moz-transform: skew(0deg, 6deg);
+        -ms-transform: skew(0deg, 6deg);
+        -o-transform: skew(0deg, 6deg);
+        transform: skew(0deg, 6deg);
+    }
+    >div:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 50%;
+        background: $color__background-lightgrey;
+        z-index: -1;
+        -webkit-transform: skew(0deg, -6deg);
+        -moz-transform: skew(0deg, -6deg);
+        -ms-transform: skew(0deg, -6deg);
+        -o-transform: skew(0deg, -6deg);
+        transform: skew(0deg, -6deg);
+    }
+    ul {
+        margin: 0;
+    }
+    .divider {
+        width: auto;
+        margin-top: 2rem;
+    }
+}
+
+.page-template-Leasing, .page-template-application {
+	.wpcf7 {
+		input, textarea {
+			background: #FFF;;
+			color: $color__background-body;
+			border: 1px solid $color__background-body;
+			&:focus {
+				color: $color__background-body;
+			}
+		}
+		input[type=submit] {
+			background: $color__background-darkgold;
+			border: 1px solid $color__background-darkgold;
+            color: $color__accent-softwhite;
+            &:hover {
+                background: $color__accent-gold;
+                border: 1px solid $color__accent-gold; 
+            }
+		}
+	}
+}
+
+/* Leasing Page */
+
+.lambo {
+    height: 200px;
+    background: url(../../assets/car-lamborghini.svg) no-repeat;
+    background-position: 50%;
+}
+
+/* Application Page */
+
+.ferrari {
+    height: 200px;
+    background: url(../../assets/car-ferrari.svg) no-repeat;
+    background-position: 50%;
+}
+
+.page-template-application {
+    .page-info-container {
+        >div {
+            color: $color__text-main;
+        }
+        >div:before {
+            background: $color__background-darkgrey;
+        }
+        >div:after {
+            background: $color__background-darkgrey;
+        }
+    }
+}

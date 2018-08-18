@@ -11,32 +11,32 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
             <section class="contact-map-container">
-                <?php echo the_field('contact_google_maps'); ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/contact-map.svg" alt="Google Map" />
+                <!-- <?php echo the_field('contact_google_maps'); ?> -->
             </section>
 
-            <section class="company-contact-container">
-                <div>
-                    <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/location-icon.svg" alt="Location icon" />
-                        <p>Pure Executive Auto</p>
+            <section class="company-contact-container r-container">
+                <div class="company-address-wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/location-icon.svg" alt="Location icon" />
+                    <div class="address-info-wrapper company-info">
+                        <p class="address-title">Pure Executive Auto</p>
+                        <p class="address-info"><?php echo the_field('contact_address'); ?></p>
                     </div>
-                    <p><?php echo the_field('contact_address'); ?></p>
                 </div>
-                <div>
+                <div class="company-telephone-wrapper">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/phone-icon.svg" alt="Telephone icon" />
-                    <a href="tel:<?php echo the_field('contact_telephone'); ?>"><?php echo the_field('contact_telephone'); ?></a>
+                    <a class="company-info" href="tel:<?php echo the_field('contact_telephone'); ?>"><?php echo the_field('contact_telephone'); ?></a>
                 </div>
             </section>
 
-            <div class="divider">
+            <div class="divider centered">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/divider-gold.svg" alt="Logo border" />
             </div>
 
-            <section class="luxury-car-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/car-bentley.svg" alt="Silver Bentley" />
+            <section class="luxury-car-container bentley centered">
             </section>
 
-            <section class="contact-form-container">
+            <section class="contact-form-container centered">
                 <?php echo the_field('contact_form'); ?>
             </section>
 

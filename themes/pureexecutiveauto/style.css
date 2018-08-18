@@ -233,7 +233,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #D8D8D8;
   font-family: sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -300,7 +300,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #111111;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -468,7 +468,7 @@ a {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -602,6 +602,67 @@ a {
 .bypostauthor {
   display: block; }
 
+/* Containers */
+.r-container {
+  padding: 25px 0 20px; }
+
+/* Shared Styling */
+.site-main {
+  margin-bottom: 4rem; }
+
+.centered {
+  text-align: center; }
+
+.divider {
+  width: 325px;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 1rem; }
+  .divider img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.luxury-car-container {
+  width: 300px;
+  margin: 0 auto; }
+
+.bentley {
+  height: 200px;
+  background: url(../../assets/car-bentley.svg) no-repeat;
+  background-position: 12px 0; }
+
+.wpcf7 input, .wpcf7 textarea {
+  border-radius: 0;
+  background: #232323;
+  border: none;
+  width: 325px;
+  color: #FBFBFB; }
+  .wpcf7 input:focus, .wpcf7 textarea:focus {
+    outline: none;
+    color: #FBFBFB; }
+
+.wpcf7 input {
+  height: 34px; }
+
+.wpcf7 textarea {
+  margin-bottom: 1rem; }
+
+.wpcf7 p {
+  margin: 0; }
+
+.wpcf7 input[type=submit] {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 175px;
+  text-shadow: none;
+  height: 45px;
+  background: transparent;
+  border: 1px solid #FBFBFB;
+  color: #FBFBFB;
+  text-transform: uppercase; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -665,4 +726,262 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
+/* Leasing & Application Shared */
+.page-template-Leasing, .page-template-application {
+  background: #FFF; }
+
+.page-title {
+  margin: 4rem 0 2rem;
+  font-size: 18px;
+  color: #111111;
+  text-transform: uppercase; }
+
+.page-info-container {
+  margin-bottom: 2rem; }
+  .page-info-container > div {
+    width: 320px;
+    margin: 0 auto;
+    color: #111111;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    padding: 30px 15px 15px; }
+  .page-info-container > div:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #D7D7D7;
+    z-index: -1;
+    -webkit-transform: skew(0deg, 6deg);
+    transform: skew(0deg, 6deg); }
+  .page-info-container > div:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: #D7D7D7;
+    z-index: -1;
+    -webkit-transform: skew(0deg, -6deg);
+    transform: skew(0deg, -6deg); }
+  .page-info-container ul {
+    margin: 0; }
+  .page-info-container .divider {
+    width: auto;
+    margin-top: 2rem; }
+
+.page-template-Leasing .wpcf7 input, .page-template-Leasing .wpcf7 textarea, .page-template-application .wpcf7 input, .page-template-application .wpcf7 textarea {
+  background: #FFF;
+  color: #111111;
+  border: 1px solid #111111; }
+  .page-template-Leasing .wpcf7 input:focus, .page-template-Leasing .wpcf7 textarea:focus, .page-template-application .wpcf7 input:focus, .page-template-application .wpcf7 textarea:focus {
+    color: #111111; }
+
+.page-template-Leasing .wpcf7 input[type=submit], .page-template-application .wpcf7 input[type=submit] {
+  background: #756535;
+  border: 1px solid #756535;
+  color: #FBFBFB; }
+  .page-template-Leasing .wpcf7 input[type=submit]:hover, .page-template-application .wpcf7 input[type=submit]:hover {
+    background: #B2994C;
+    border: 1px solid #B2994C; }
+
+/* Leasing Page */
+.lambo {
+  height: 200px;
+  background: url(../../assets/car-lamborghini.svg) no-repeat;
+  background-position: 50%; }
+
+/* Application Page */
+.ferrari {
+  height: 200px;
+  background: url(../../assets/car-ferrari.svg) no-repeat;
+  background-position: 50%; }
+
+.page-template-application .page-info-container > div {
+  color: #D8D8D8; }
+
+.page-template-application .page-info-container > div:before {
+  background: #646464; }
+
+.page-template-application .page-info-container > div:after {
+  background: #646464; }
+
+.site-header {
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 100% 55%, 50% 74%, 0 55%, 0 75%);
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 100% 55%, 50% 74%, 0 55%, 0 75%);
+  position: fixed;
+  top: 0;
+  z-index: 1; }
+
+.site-branding {
+  margin: 0 auto;
+  height: 50px;
+  width: 190px;
+  margin-top: 1rem; }
+
+.header-logo {
+  background-image: url(../../assets/pea-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%; }
+
+.responsive-menu-button {
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .responsive-menu-button:active, .responsive-menu-button:hover, .responsive-menu-button:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
+.site-footer {
+  height: 161px;
+  background: url(../../assets/footer-bg.svg);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.site-info {
+  max-width: 300px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding-top: 2rem; }
+  .site-info p {
+    margin: 0; }
+  .site-info a {
+    text-decoration: none;
+    color: #D8D8D8; }
+    .site-info a:hover {
+      color: #B2994C; }
+
+.footer-divider {
+  width: 100%;
+  height: auto;
+  margin: 0; }
+  .footer-divider img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.hero-container {
+  width: 100%;
+  height: 720px;
+  background: url(../../assets/home-mobile-heroimg.svg) no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .hero-container a {
+    margin-bottom: 5.5rem;
+    padding: 0.5rem 2rem;
+    border: 1px solid #D8D8D8;
+    background: rgba(0, 0, 0, 0.4);
+    color: #D8D8D8;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .hero-container a:hover {
+      background: rgba(0, 0, 0, 0.6); }
+
+.home-about-container {
+  width: 100%;
+  background: url(../../assets/beehive-bg2.svg);
+  background-size: cover;
+  padding: 7rem 0;
+  position: relative;
+  margin-bottom: 4rem; }
+
+.aboutus-wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  background: rgba(35, 35, 35, 0.9); }
+  .aboutus-wrapper .page-title {
+    margin: 0 0 7rem 0;
+    color: #D8D8D8; }
+  .aboutus-wrapper .divider {
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    max-width: 450px;
+    left: 0;
+    top: 13rem; }
+
+.contact-map-container {
+  height: 280px; }
+  .contact-map-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.company-contact-container {
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto; }
+  .company-contact-container > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .company-contact-container p {
+    margin: 0; }
+  .company-contact-container .address-title {
+    margin-bottom: 0.5rem;
+    color: #B2994C; }
+
+.company-address-wrapper img {
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+.address-info-wrapper {
+  padding-top: 0.3rem; }
+  .address-info-wrapper img {
+    -ms-flex-item-align: start;
+        align-self: flex-start; }
+
+.address-info {
+  font-size: 14px; }
+
+.company-info {
+  margin-left: 0.5rem; }
+
+.company-telephone-wrapper a {
+  font-size: 18px;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #D8D8D8; }
+  .company-telephone-wrapper a:hover {
+    color: #B2994C; }

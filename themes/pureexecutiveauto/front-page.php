@@ -24,23 +24,26 @@ get_header(); ?>
                 <div class="featured-portfolio-wrapper"></div>
             </section>
 
-            <section class="featured-info-container">
-                <div>
-                    <p>Featured Portfolio</p>
+            <section class="home-about-container">
+                <div class="aboutus-wrapper centered">
+                    <p class="page-title">Who We Are</p>
 
                     <div class="divider">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/divider-gold.svg" alt="Logo border" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/divider-goldbig.svg" alt="Logo border" />
                     </div>
 
-                    <div></div>
+                    <div>
+                        <?php while(have_posts()) : the_post(); ?>
+                            <?php the_content();?>
+                        <?php endwhile; ?>
+                    </div>
                 </div>
             </section>
 
-            <section class="luxury-car-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/car-bentley.svg" alt="Silver Bentley" />
+            <section class="luxury-car-container bentley centered">
             </section>
 
-            <section class="home-form-container">
+            <section class="home-form-container centered">
                 <?php echo the_field('home_form'); ?>
             </section>
 
