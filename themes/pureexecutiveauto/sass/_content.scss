@@ -107,7 +107,8 @@
 		margin: 0;
 	}
 	input[type=submit] {
-		box-shadow: none;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
     	width: 175px;
     	text-shadow: none;
     	height: 45px;

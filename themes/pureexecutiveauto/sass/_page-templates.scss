@@ -77,12 +77,12 @@
 			}
 		}
 		input[type=submit] {
-			background: $color__background-darkgold;
-			border: 1px solid $color__background-darkgold;
+            background: $color__accent-gold;
+            border: 1px solid $color__accent-gold; 
             color: $color__accent-softwhite;
             &:hover {
-                background: $color__accent-gold;
-                border: 1px solid $color__accent-gold; 
+                background: $color__background-darkgold;
+			    border: 1px solid $color__background-darkgold; 
             }
 		}
 	}
