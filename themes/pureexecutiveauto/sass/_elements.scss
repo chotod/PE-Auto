@@ -5,10 +5,6 @@
 html {
 	box-sizing: border-box;
 	@include font-size(1);
-	margin-top: 32px;
-	@media screen and (max-width: 782px) {
-		margin-top: 46px;
-	}
 }
 
 *,

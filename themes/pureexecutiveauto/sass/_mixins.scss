@@ -4,6 +4,13 @@
 	font-size: $sizeValue * 1rem;
 }
 
+// Media query
+@mixin media($width) {
+	@media only screen and (min-width: $width) {
+	  @content;
+	}
+  }
+
 // Center block
 @mixin center-block {
 	display: block;

@@ -16,7 +16,7 @@ get_header(); ?>
                 </div>
             <?php endwhile; // End of the loop. ?>
 
-            <section class="page-info-container">
+            <section class="page-info-container l-container">
                 <div>
                     <?php echo the_field('page_information'); ?>
                     <div class="divider">
@@ -28,8 +28,14 @@ get_header(); ?>
             <section class="luxury-car-container lambo centered">
             </section>
 
-            <section class="leasing-form-container centered">
-                <?php echo the_field('application_form'); ?>
+            <section class="leasing-form-container l-container centered">
+                <?php $posts = get_field('contact_form');
+                if( $posts ): 
+                    foreach( $posts as $p ): 
+                    $cf7_id= $p->ID;
+                    echo do_shortcode( '[contact-form-7 id="'.$cf7_id.'" ]' ); 
+                    endforeach;
+                endif; ?>
             </section>
             
 		</main><!-- #main -->

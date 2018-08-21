@@ -102,3 +102,77 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ *  Move WP Admin Bar to the bottom
+ */
+function pakdhw_move_admin_bar() {
+    echo '
+    <style type="text/css">
+    body.admin-bar #wphead {
+        padding-top: 0;
+    }
+    #wpadminbar {
+        top: auto !important;
+        bottom: 0;
+        position: fixed;
+    }
+    #wpadminbar .quicklinks .menupop ul {
+        position: absolute;
+        bottom: 32px;
+        background-color: #23282d;
+    }
+    #wpadminbar .quicklinks .menupop ul + ul {
+        bottom: 70px;
+    }
+    #wpadminbar .quicklinks .menupop ul ul {
+        transform: translateY(62px);
+        -webkit-transform: translateY(62px);
+        -ms-transform: translateY(62px);
+    }
+    #wpadminbar .quicklinks .menupop ul.ab-sub-secondary {
+        bottom: 64px;
+        position: absolute;
+    }
+    @media screen and (max-width: 782px) {
+        #wpadminbar .quicklinks .menupop ul {
+            bottom: 46px;
+        }
+        #wpadminbar .quicklinks .menupop ul + ul,
+        #wpadminbar .quicklinks .menupop ul.ab-sub-secondary {
+            bottom: 86px;
+        }
+        #wpadminbar .quicklinks .menupop ul ul {
+            transform: translateY(92px);
+            -webkit-transform: translateY(92px);
+            -ms-transform: translateY(92px);
+        }
+    }
+    </style>';
+}
+// on frontend area
+add_action( 'wp_head', 'pakdhw_move_admin_bar' );
+
+/**
+ *  Remove the html margin-top
+ */
+function remove_admin_login_header() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('get_header', 'remove_admin_login_header');
+
+function change_limit_mobile($query){
+
+    $new_limit = 3;
+
+    $iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+    $android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+    $ipad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
+    $berry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+    $ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
+
+    if (( $iphone || $android || $ipad || $ipod || $berry ) && $query->is_main_query()){
+        set_query_var('posts_per_page',$new_limit);
+    }
+}
+add_action('pre_get_posts','change_limit_mobile');

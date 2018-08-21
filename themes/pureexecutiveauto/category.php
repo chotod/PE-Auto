@@ -11,11 +11,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
             <section class="banner-container">
-                <div>
+                <div class="category-heading">
                     <?php if (is_category( 'portfolio' )): ?>
-                        <h2>Portfolio</h2>
+                        <p>Portfolio</p>
                     <?php elseif(is_category( 'sold-portfolio' )): ?>
-                        <h2>Sold Portfolio</h2>
+                        <p>Sold Portfolio</p>
                     <?php endif; ?>
                 </div>
                 <div class="divider">
@@ -23,11 +23,63 @@ get_header(); ?>
                 </div>
             </section>
 
-            <section class="portfolio-container"></section>
+            <section class="portfolio-container">
+                <?php if (is_category( 'portfolio' )): ?>
+                    
+                    <div class="cars-gallery-container">
+                        <?php query_posts( array ( 'category_name' => 'portfolio' ) );
+                        while (have_posts()) : the_post(); ?>
 
-            <section class="luxury-car-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/car-bentley.svg" alt="Silver Bentley" />
+                            <div class="car-wrapper">
+                                <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail('large'); ?>
+                                <div class="label-wrapper">
+                                    <p class="car-title"><?php the_title(); ?></p>
+                                    <?php if(get_field('car_subtitle')) : ?>
+                                        <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
+                                    <?php endif; ?>
+                                    <?php if(get_field('car_price')) : ?>
+                                        <p class="car-price">$<?php echo the_field('car_price'); ?></p>
+                                    <?php else: ?>
+                                        <p class="car-price">coming soon</p>
+                                    <?php endif; ?>
+                                </div>
+                                </a>
+                            </div>
+                        <?php endwhile; wp_reset_query(); ?>
+                        <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+                    </div>
+
+                <?php elseif(is_category( 'sold-portfolio' )): ?>
+
+                    <div class="cars-gallery-container">
+                    <?php query_posts( array ( 'category_name' => 'sold-portfolio', 'posts_per_page' => 5 ) );
+                        while (have_posts()) : the_post(); ?>
+
+                            <div class="car-wrapper">
+                                <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail('large'); ?>
+                                <div class="label-wrapper">
+                                    <p class="car-title"><?php the_title(); ?></p>
+                                    <?php if(get_field('car_subtitle')) : ?>
+                                        <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
+                                    <?php endif; ?>
+                                    <?php if(get_field('car_price')) : ?>
+                                        <p class="car-price">$<?php echo the_field('car_price'); ?></p>
+                                    <?php else: ?>
+                                        <p class="car-price">sold</p>
+                                    <?php endif; ?>
+                                </div>
+                                </a>
+                            </div>
+                        <?php endwhile; wp_reset_query(); ?>
+                    </div>
+
+                <?php endif; ?>
             </section>
+
+            <section class="luxury-car-container bentley"></section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

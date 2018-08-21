@@ -18,6 +18,7 @@ $color__background-forms: #232323;
 $color__background-lightgrey: #D7D7D7;
 $color__background-darkgrey: #646464;
 $color__background-darkgold: #756535;
+$color__background-medgold: #A99148;
 
 $color__link: royalblue;
 $color__link-visited: purple;
@@ -28,12 +29,16 @@ $color__accent-softwhite: #FBFBFB;
 
 // Typography
 
-$font__main: sans-serif;
+$font__main: 'planer-regular', 'Arial', sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
 //Queries
+$beehive: 450px;
+$beehive2: 580px;
 $tablet: 750px;
 $desktop: 1024px;
+$wide: 1200px;
+

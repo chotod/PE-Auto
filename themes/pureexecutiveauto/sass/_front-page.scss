@@ -1,11 +1,24 @@
+.home {
+    margin-top: 0;
+}
+
 .hero-container {
     width: 100%;
     height: 720px;
     background: url(../../assets/home-mobile-heroimg.svg) no-repeat;
     background-size: cover;
+    background-position: 1px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    @include media($beehive) {
+        height: 850px;
+    }
+    @include media($tablet) {
+        background: url(../../assets/home-bg.jpg) no-repeat;
+        background-position: 60% 0%;
+        height: 675px;
+    }
     a {
         margin-bottom: 5.5rem;
         padding: 0.5rem 2rem;
@@ -20,20 +33,136 @@
     }
 }
 
+.featured-portfolio-container {
+    margin-bottom: 6rem;
+    .page-title {
+        margin: 4rem 0 2rem;
+        color: $color__accent-gold;
+    }
+    .divider {
+        height: 44px;
+        width: 100%;
+        margin-bottom: 4rem;
+        @include media($beehive) {
+            width: 80%;
+        }
+        @include media($tablet) {
+            width: 60%;
+        }
+        @include media($desktop) {
+            width: 600px;
+        }
+    }
+}
+
+.featured-portfolio-wrapper {
+    @include media($desktop) {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.featured-car-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    @include media($desktop) {
+        width: 30%;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
+    @include media($wide) {
+        width: 28%;
+    }
+    img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        vertical-align: bottom;
+        @include media($desktop) {
+            height: 215px;
+        }
+        @include media($wide) {
+            height: 235px;
+        }
+    }
+}
+
+.featured-label-wrapper {
+    background: #232323;
+    height: 80px;
+    padding: 0 0.5rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        width: 30px;
+        height: 30px;
+        text-decoration: none;
+        border: 1px solid #FFF;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        text-transform: lowercase;
+    }
+    p {
+        margin: 0;
+        font-weight: bold;
+    }
+    .car-price {
+        color: $color__accent-gold;
+    }
+}
+
+.car-title {
+    word-spacing: -2px;
+}
+
+.more-arrow {
+    width: 30px;
+    height: 20px;
+    background: url(../../assets/arrow-down.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.more-info {
+    color: #FFF;
+}
+
 .home-about-container {
     width: 100%;
     background: url(../../assets/beehive-bg.svg);
     background-size: cover;
-    padding: 7rem 0;
+    background-position: -13px 0;
+    padding: 7rem 2rem;
     position: relative;
     margin-bottom: 4rem;
+    clip-path: polygon(0 1.5%,0 20%,0 49%,0 97%,49.5% 100%,50% 100%,49.5% 100%,100% 97%,100% 51%,101% 20%,100% 1.5%,50% 5%);
+    @include media($beehive2) {
+        clip-path: polygon(0 1.5%,0 20%,0 49%,0 95%,49.5% 100%,50% 100%,49.5% 100%,100% 95%,100% 51%,101% 20%,100% 1.5%,50% 6.5%)
+    }
+    @include media($tablet) {
+        position: inherit;
+        padding: 8rem 2rem;
+        clip-path: polygon(0% 0%,0 20%,0% 49%,0% 89%,49.5% 100%,50% 100%,49.5% 100%,100% 89%,100% 51%,100% 19%,100% 0%,49.5% 7%);
+    }
+    @include media($desktop) {
+        padding: 12rem 2rem;
+    }
 }
 
 .aboutus-wrapper {
-    width: 320px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 2.5rem 2rem;
     background: rgba(35,35,35,0.9);
+    @include media($beehive) {
+        position: relative;
+    }
     .page-title {
         margin: 0 0 7rem 0;
         color: $color__text-main;
@@ -41,9 +170,16 @@
     .divider {
         position: absolute;
         width: 100%;
-        height: 44px;
+        height: 49px;
         max-width: 450px;
         left: 0;
-        top: 13rem;
+        top: 14rem;
+        @include media($beehive) {
+            top: 7rem;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }

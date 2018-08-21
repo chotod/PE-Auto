@@ -11,7 +11,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
             <section class="contact-map-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/contact-map.svg" alt="Google Map" />
+                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/contact-map.svg" alt="Google Map" /> -->
                 <!-- <?php echo the_field('contact_google_maps'); ?> -->
             </section>
 
@@ -36,8 +36,14 @@ get_header(); ?>
             <section class="luxury-car-container bentley centered">
             </section>
 
-            <section class="contact-form-container centered">
-                <?php echo the_field('contact_form'); ?>
+            <section class="contact-form-container l-container centered">
+                <?php $posts = get_field('contact_form');
+                if( $posts ): 
+                    foreach( $posts as $p ): 
+                    $cf7_id= $p->ID;
+                    echo do_shortcode( '[contact-form-7 id="'.$cf7_id.'" ]' ); 
+                    endforeach;
+                endif; ?>
             </section>
 
 		</main><!-- #main -->

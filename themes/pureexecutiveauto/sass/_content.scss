@@ -54,6 +54,32 @@
 	padding: 25px 0 20px;
 }
 
+.l-container {
+	padding: 0 1.5rem;
+}
+
+/* Page Margining */
+body {
+	margin-top: 53px;
+	@include media($tablet) {
+		margin-top:	64px;
+	}
+}
+
+.page-template-sourcing, .page-template-leasing {
+	margin-top: 110px;
+	@include media($desktop) {
+		margin-top: 150px;
+	}
+}
+
+.category {
+	margin-top: 70px;
+	@include media($desktop) {
+		margin-top: 80px;
+	}
+}
+
 /* Shared Styling */
 
 .site-main {
@@ -69,9 +95,21 @@
     height: 100%;
 	margin: 0 auto;
 	margin-bottom: 1rem;
+	@include media($tablet) {
+		width: 450px;
+	}
+	@include media($desktop) {
+		width: 500px;
+	}
 	img {
 		@include img-fit;
 	}
+}
+
+.page-title {
+	font-size: 25px;
+	text-transform: uppercase;
+	font-family: 'Times New Roman', serif;
 }
 
 .luxury-car-container {
@@ -82,15 +120,20 @@
 .bentley {
     height: 200px;
     background: url(../../assets/car-bentley.svg) no-repeat;
-    background-position: 12px 0;   
+	background-position: 12px 0;
+	@include media($tablet) {
+		background-position: -33px 0;
+		background-size: 290px;
+		height: 260px;
+	} 
 }
 
 .wpcf7 {
 	input, textarea {
+		width: 100%;
 		border-radius: 0;
 		background: $color__background-forms;
 		border: none;
-		width: 325px;
 		color: $color__accent-softwhite;
 		&:focus {
 			outline: none;
@@ -105,6 +148,8 @@
 	}
 	p {
 		margin: 0;
+		margin: 0 auto;
+		max-width: 600px;
 	}
 	input[type=submit] {
 		-webkit-box-shadow: none;

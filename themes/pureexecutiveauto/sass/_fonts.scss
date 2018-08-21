@@ -1,3 +1,15 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+    font-family: 'planer-regular';
+    src: url('./../../assets/fonts/planer-regular-webfont.eot');
+    src: url('./../../assets/fonts/planer-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./../../assets/fonts/planer-regular-webfont.woff2') format('woff2'),
+         url('./../../assets/fonts/planer-regular-webfont.woff') format('woff'),
+         url('./../../assets/fonts/planer-regular-webfont.ttf') format('truetype'),
+         url('./../../assets/fonts/planer-regular-webfont.svg#planerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

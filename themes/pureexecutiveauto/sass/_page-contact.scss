@@ -1,7 +1,11 @@
 .contact-map-container {
     height: 280px;
-    img {
-        @include img-fit;   
+    background: url(../../assets/contact-map-lg.svg) no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+    @include media($desktop) {
+        height: 500px;
+        background-position: 50% 67%;
     }
 }
 
@@ -12,6 +16,11 @@
     flex-direction: column;
     justify-content: space-around;
     margin: 0 auto;
+    @include media($tablet) {
+        width: 600px;
+        flex-direction: row;
+        align-items: center;
+    }
     >div {
         display: flex;
     }
@@ -46,6 +55,9 @@
 }
 
 .company-telephone-wrapper {
+    @include media($tablet) {
+        flex-direction: column;
+    }
     a {
         font-size: 18px;
         margin-top: 0.5rem;

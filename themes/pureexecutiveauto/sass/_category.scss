@@ -1,0 +1,120 @@
+.banner-container {
+    margin-top: 26px;
+    margin-bottom: 2rem;
+}
+
+.category-heading {
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+    margin-bottom: 2.5rem;
+    font-family: 'Times New Roman', serif;
+    font-size: 28px;
+    @include media($tablet) {
+        height: 105px;
+        font-size: 32px;
+    }
+    @include media($desktop) {
+        height: 130px;
+    }
+    p {
+        margin-top: 2.5rem;
+        @include media($desktop) {
+            margin-top: 4.5rem;
+        }
+    }
+}
+.category-heading:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: $color__background-medgold;
+    z-index: -1;
+    -webkit-transform: skew(0deg, 6deg);
+    -moz-transform: skew(0deg, 6deg);
+    -ms-transform: skew(0deg, 6deg);
+    -o-transform: skew(0deg, 6deg);
+    transform: skew(0deg, 6deg);
+    @include media($tablet) {
+        -webkit-transform: skew(0deg, 4.5deg);
+        -moz-transform: skew(0deg, 4.5deg);
+        -ms-transform: skew(0deg, 4.5deg);
+        -o-transform: skew(0deg, 4.5deg);
+        transform: skew(0deg, 4.5deg);
+    }
+}
+.category-heading:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: $color__background-medgold;
+    z-index: -1;
+    -webkit-transform: skew(0deg, -6deg);
+    -moz-transform: skew(0deg, -6deg);
+    -ms-transform: skew(0deg, -6deg);
+    -o-transform: skew(0deg, -6deg);
+    transform: skew(0deg, -6deg);
+    @include media($tablet) {
+        -webkit-transform: skew(0deg, -4.5deg);
+        -moz-transform: skew(0deg, -4.5deg);
+        -ms-transform: skew(0deg, -4.5deg);
+        -o-transform: skew(0deg, -4.5deg);
+        transform: skew(0deg, -4.5deg);
+    }
+}
+
+.portfolio-container {
+    margin-bottom: 4rem;
+}
+
+.car-wrapper {
+    position: relative;
+    max-width: 500px;
+    height: 250px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    @include media($tablet) {
+        height: 300px;
+        margin-bottom: 1rem;
+    }
+    a {
+        color: white;
+    }
+    img {
+        @include img-fit;
+        vertical-align: bottom;
+    }
+}
+
+.label-wrapper {
+    width: 100%;
+    height: 66px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 3px 15px 0px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+        margin: 0;
+    }
+}
+
+.car-subtitle {
+    font-size: 12px;
+}
+
+.car-price {
+    color: $color__accent-gold;
+}

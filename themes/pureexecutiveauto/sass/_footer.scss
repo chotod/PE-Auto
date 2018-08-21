@@ -6,13 +6,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include media($tablet) {
+        height: 120px;
+    }
 }
 
 .site-info {
-    max-width: 300px;
+    max-width: 1000px;
     text-align: center;
     margin-bottom: 0.5rem;
-    padding-top: 2rem;
+    padding: 2rem 0.5rem 0;
     p {
         margin: 0;
     }
@@ -25,6 +28,12 @@
     width: 100%;
     height: auto;
     margin: 0;
+    @include media($tablet) {
+        width: 60%;
+    }
+    @include media($desktop) {
+        width: 500px;
+    }
     img {
         @include img-fit;
     }
