@@ -73,10 +73,13 @@ body {
 	}
 }
 
-.category {
+.category, .single {
 	margin-top: 70px;
+	@include media($tablet) {
+		margin-top: 78px;
+	}
 	@include media($desktop) {
-		margin-top: 80px;
+		margin-top: 82px;
 	}
 }
 

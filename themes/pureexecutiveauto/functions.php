@@ -83,7 +83,11 @@ add_filter( 'stylesheet_uri', 'peauto_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function peauto_scripts() {
-	wp_enqueue_style( 'peauto-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'peauto-style', get_stylesheet_uri() );
+    
+    wp_enqueue_script( 'jquery');
+
+	wp_enqueue_script( 'peauto-modal-js', get_template_directory_uri() . '/build/js/modal.min.js', array('jquery'), false, true);
 
 	wp_enqueue_script( 'peauto-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
@@ -160,19 +164,3 @@ function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
 add_action('get_header', 'remove_admin_login_header');
-
-function change_limit_mobile($query){
-
-    $new_limit = 3;
-
-    $iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-    $android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
-    $ipad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
-    $berry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
-    $ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
-
-    if (( $iphone || $android || $ipad || $ipod || $berry ) && $query->is_main_query()){
-        set_query_var('posts_per_page',$new_limit);
-    }
-}
-add_action('pre_get_posts','change_limit_mobile');

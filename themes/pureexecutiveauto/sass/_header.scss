@@ -21,6 +21,7 @@
     margin-top: 1rem;
     @include media($tablet) {
         width: 250px;
+        margin-top: 1.5rem;
     }
 }
 
@@ -46,7 +47,7 @@
 .main-navigation {
     @include media($desktop) {
         position: absolute;
-        top: 1.5rem;
+        top: 1.3rem;
         ul {
             display: flex;
             justify-content: space-around;

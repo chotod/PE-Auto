@@ -1,0 +1,80 @@
+.single {
+    .category-heading {
+        font-size: 20px;
+        text-transform: uppercase;
+        @include media($tablet) {
+            font-size: 32px;
+        }
+        p {
+            margin: 0;
+            margin-top: 0.5rem;
+            color: $color__text-main;
+            @include media($desktop) {
+                margin-top: 2.5rem;
+            }
+        }
+    }
+    color: $color__accent-easywhite;
+    word-spacing: 2px;
+}
+
+.category-subheading {
+    text-align: center;
+    text-transform: uppercase;
+    @include media($tablet) {
+        margin: 5rem 0 3rem;
+    }
+    .car-subtitle {
+        font-size: 18px;
+    }
+    .car-price {
+        font-size: 25px;
+    }
+}
+
+.single-car-container {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li:first-of-type {
+            width: 100%;
+        }
+        li {
+            width: 33%;
+        }
+    }
+}
+
+.single-car-title, .specs-heading {
+    font-size: 22px;
+    color: $color__accent-gold;
+}
+
+.single-description-container, .single-specs-container {
+    margin-bottom: 4rem;
+    a {
+        color: $color__accent-gold;
+    }
+    strong {
+        color: $color__background-darkgold;
+    }
+}
+
+.single-car-desc, .single-car-specs, .specs-heading {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.single-car-desc {
+    text-align: center;
+}
+
+.single-car-specs {
+    ul {
+        margin: 0;
+    }
+}

@@ -9,34 +9,65 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<?php while ( have_posts() ) : the_post(); ?>
 
 			<section class="banner-container">
                 <div class="category-heading">
-					<?php the_title(); ?>
+					<p><?php the_title(); ?></p>
                 </div>
-                <div class="">
+                <div class="category-subheading">
+
 					<?php if(get_field('car_subtitle')) : ?>
             			<p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
 					<?php endif; ?>
+
+					<?php if(in_category( 'portfolio' )): ?>
 						<?php if(get_field('car_price')) : ?>
-                            <p class="car-price">$<?php echo the_field('car_price'); ?></p>
-                        <?php else: ?>
-                            <p class="car-price">coming soon</p>
+                        	<p class="car-price"><?php echo the_field('car_price'); ?></p>
+                    	<?php else: ?>
+                        	<p class="car-price">coming soon</p>
 						<?php endif; ?>
+                    <?php elseif(in_category( 'sold-portfolio' )): ?>
+						<?php if(get_field('car_price')) : ?>
+                        	<p class="car-price"><?php echo the_field('car_price'); ?></p>
+                    	<?php else: ?>
+                        	<p class="car-price">sold</p>
+						<?php endif; ?>
+                    <?php endif; ?>
                 </div>
             </section>
 
-			<?php the_post_thumbnail('large'); ?>
-			<?php the_content(); ?>
-			<?php the_title(); ?>
-			<?php if(get_field('car_subtitle')) : ?>
-            <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
+			<section class="single-car-container">
+				<?php $rows = get_field('car_photos');
+				if($rows) : ?>
+					<ul>
+						<?php foreach($rows as $row) : ?>
+							<li><img src="<?php echo $row['photo_gallery'];?>"></li>
+						<?php endforeach; ?>
+					</ul>
+				<?php endif; ?>
+			</section>
+
+			<div class="divider centered">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/divider-gold.svg" alt="Logo border" />
+				<p class="single-car-title"><?php the_title(); ?></p>
+			</div>
+
+			<?php if(get_field('car_description')) : ?>
+				<section class="single-description-container l-container">
+					<div class="single-car-desc"><?php echo the_field('car_description'); ?></div>
+				</section>
 			<?php endif; ?>
-			<p class="car-price">$<?php echo the_field('car_price'); ?></p>
 
-		<?php endwhile; // End of the loop. ?>
+			<?php if(get_field('car_specifications')) : ?>
+				<section class="single-specs-container l-container">
+					<p class="specs-heading">Car Specs:</p>
+					<div class="single-car-specs"><?php echo the_field('car_specifications'); ?></div>
+				</section>
+			<?php endif; ?>
 
+		<section class="luxury-car-container bentley centered">
+		</section>
+		
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

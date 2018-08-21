@@ -629,11 +629,14 @@ body {
     .page-template-sourcing, .page-template-leasing {
       margin-top: 150px; } }
 
-.category {
+.category, .single {
   margin-top: 70px; }
+  @media only screen and (min-width: 750px) {
+    .category, .single {
+      margin-top: 78px; } }
   @media only screen and (min-width: 1024px) {
-    .category {
-      margin-top: 80px; } }
+    .category, .single {
+      margin-top: 82px; } }
 
 /* Shared Styling */
 .site-main {
@@ -893,7 +896,8 @@ object {
   margin-top: 1rem; }
   @media only screen and (min-width: 750px) {
     .site-branding {
-      width: 250px; } }
+      width: 250px;
+      margin-top: 1.5rem; } }
 
 .header-logo {
   background-image: url(../../assets/pea-logo.svg);
@@ -915,7 +919,7 @@ object {
 @media only screen and (min-width: 1024px) {
   .main-navigation {
     position: absolute;
-    top: 1.5rem; }
+    top: 1.3rem; }
     .main-navigation ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1218,6 +1222,14 @@ object {
     .category-heading:before {
       -webkit-transform: skew(0deg, 4.5deg);
       transform: skew(0deg, 4.5deg); } }
+  @media only screen and (min-width: 1024px) {
+    .category-heading:before {
+      -webkit-transform: skew(0deg, 6.5deg);
+      transform: skew(0deg, 6.5deg); } }
+  @media only screen and (min-width: 1200px) {
+    .category-heading:before {
+      -webkit-transform: skew(0deg, 5.5deg);
+      transform: skew(0deg, 5.5deg); } }
 
 .category-heading:after {
   content: '';
@@ -1234,9 +1246,32 @@ object {
     .category-heading:after {
       -webkit-transform: skew(0deg, -4.5deg);
       transform: skew(0deg, -4.5deg); } }
+  @media only screen and (min-width: 1024px) {
+    .category-heading:after {
+      -webkit-transform: skew(0deg, -6.5deg);
+      transform: skew(0deg, -6.5deg); } }
+  @media only screen and (min-width: 1200px) {
+    .category-heading:after {
+      -webkit-transform: skew(0deg, -5.5deg);
+      transform: skew(0deg, -5.5deg); } }
+
+@media only screen and (min-width: 1024px) {
+  .category .divider {
+    margin-top: 5rem;
+    margin-bottom: 4rem; } }
 
 .portfolio-container {
   margin-bottom: 4rem; }
+
+@media only screen and (min-width: 1024px) {
+  .cars-gallery-container {
+    max-width: 1400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto; } }
 
 .car-wrapper {
   position: relative;
@@ -1248,6 +1283,9 @@ object {
     .car-wrapper {
       height: 300px;
       margin-bottom: 1rem; } }
+  @media only screen and (min-width: 1024px) {
+    .car-wrapper {
+      width: 32.5%; } }
   .car-wrapper a {
     color: white; }
   .car-wrapper img {
@@ -1283,6 +1321,72 @@ object {
 
 .car-price {
   color: #B2994C; }
+
+.single {
+  color: #BBBBBB;
+  word-spacing: 2px; }
+  .single .category-heading {
+    font-size: 20px;
+    text-transform: uppercase; }
+    @media only screen and (min-width: 750px) {
+      .single .category-heading {
+        font-size: 32px; } }
+    .single .category-heading p {
+      margin: 0;
+      margin-top: 0.5rem;
+      color: #D8D8D8; }
+      @media only screen and (min-width: 1024px) {
+        .single .category-heading p {
+          margin-top: 2.5rem; } }
+
+.category-subheading {
+  text-align: center;
+  text-transform: uppercase; }
+  @media only screen and (min-width: 750px) {
+    .category-subheading {
+      margin: 5rem 0 3rem; } }
+  .category-subheading .car-subtitle {
+    font-size: 18px; }
+  .category-subheading .car-price {
+    font-size: 25px; }
+
+.single-car-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .single-car-container ul li:first-of-type {
+    width: 100%; }
+  .single-car-container ul li {
+    width: 33%; }
+
+.single-car-title, .specs-heading {
+  font-size: 22px;
+  color: #B2994C; }
+
+.single-description-container, .single-specs-container {
+  margin-bottom: 4rem; }
+  .single-description-container a, .single-specs-container a {
+    color: #B2994C; }
+  .single-description-container strong, .single-specs-container strong {
+    color: #756535; }
+
+.single-car-desc, .single-car-specs, .specs-heading {
+  max-width: 600px;
+  margin: 0 auto; }
+
+.single-car-desc {
+  text-align: center; }
+
+.single-car-specs ul {
+  margin: 0; }
 
 .contact-map-container {
   height: 280px;

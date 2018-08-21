@@ -36,7 +36,7 @@ get_header(); ?>
                                         <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
                                     <?php endif; ?>
                                     <?php if(get_field('car_price')) : ?>
-                                        <p class="car-price">$<?php echo the_field('car_price'); ?></p>
+                                        <p class="car-price"><?php echo the_field('car_price'); ?></p>
                                     <?php else: ?>
                                         <p class="car-price">coming soon</p>
                                     <?php endif; ?>
