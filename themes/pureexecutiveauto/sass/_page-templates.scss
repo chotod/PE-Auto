@@ -22,7 +22,22 @@
         padding: 10px;
         position: relative;
         text-align: center;
-        padding: 30px 15px 15px;
+        padding: 60px 15px 30px;
+        min-height: 600px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        @include media($tablet) {
+            padding: 60px 30px 30px;
+        }
+        @include media($desktop) {
+            padding: 60px 60px 30px;
+        }
     } 
     >div:before {
         content: '';
@@ -63,10 +78,10 @@
     ul {
         margin: 0;
     }
-    .divider {
-        width: auto;
-        margin-top: 2rem;
-    }
+}
+
+.info-box {
+    margin-bottom: 4rem;
 }
 
 .page-template-leasing, .page-template-sourcing {

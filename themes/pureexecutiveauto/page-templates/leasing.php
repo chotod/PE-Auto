@@ -18,7 +18,7 @@ get_header(); ?>
 
             <section class="page-info-container l-container">
                 <div>
-                    <?php echo the_field('page_information'); ?>
+                    <div class="info-box"><?php echo the_field('page_information'); ?></div>
                     <div class="divider">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/divider-grey.svg" alt="Logo border"/>
                     </div>

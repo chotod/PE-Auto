@@ -9,22 +9,27 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: flex-end;
+        -ms-flex-pack: flex-end;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    @include media($tablet) {
-        height: 120px;
+    @include media($desktop) {
+        height: 170px;
     }
 }
 
 .site-info {
     max-width: 1000px;
     text-align: center;
-    margin-bottom: 0.5rem;
-    padding: 2rem 0.5rem 0;
+    margin-bottom: 1.5rem;
+    @include media($tablet) {
+        margin-bottom: 2rem;
+    }
+    @include media($desktop) {
+        margin-bottom: 2.5rem;
+    }
     p {
         margin: 0;
     }
