@@ -34,15 +34,11 @@
         background: $color__background-lightgrey;
         z-index: -1;
         -webkit-transform: skew(0deg, 6deg);
-        -moz-transform: skew(0deg, 6deg);
         -ms-transform: skew(0deg, 6deg);
-        -o-transform: skew(0deg, 6deg);
         transform: skew(0deg, 6deg);
         @include media($tablet) {
             -webkit-transform: skew(0deg, 4.5deg);
-            -moz-transform: skew(0deg, 4.5deg);
             -ms-transform: skew(0deg, 4.5deg);
-            -o-transform: skew(0deg, 4.5deg);
             transform: skew(0deg, 4.5deg);
         }
     }
@@ -56,15 +52,11 @@
         background: $color__background-lightgrey;
         z-index: -1;
         -webkit-transform: skew(0deg, -6deg);
-        -moz-transform: skew(0deg, -6deg);
         -ms-transform: skew(0deg, -6deg);
-        -o-transform: skew(0deg, -6deg);
         transform: skew(0deg, -6deg);
         @include media($tablet) {
             -webkit-transform: skew(0deg, -4.5deg);
-            -moz-transform: skew(0deg, -4.5deg);
             -ms-transform: skew(0deg, -4.5deg);
-            -o-transform: skew(0deg, -4.5deg);
             transform: skew(0deg, -4.5deg);
         }
     }

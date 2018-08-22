@@ -13,9 +13,9 @@ get_header(); ?>
 			<section class="banner-container">
                 <div class="category-heading">
 					<p><?php the_title(); ?></p>
-                </div>
-                <div class="category-subheading">
+				</div>
 
+                <div class="category-subheading">
 					<?php if(get_field('car_subtitle')) : ?>
             			<p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
 					<?php endif; ?>
@@ -39,9 +39,9 @@ get_header(); ?>
 			<section class="single-car-container">
 				<?php $rows = get_field('car_photos');
 				if($rows) : ?>
-					<ul>
+					<ul id="light-slider">
 						<?php foreach($rows as $row) : ?>
-							<li><img src="<?php echo $row['photo_gallery'];?>"></li>
+							<li data-thumb="<?php echo $row['photo_gallery'];?>"><img src="<?php echo $row['photo_gallery'];?>"></li>
 						<?php endforeach; ?>
 					</ul>
 				<?php endif; ?>
@@ -66,6 +66,10 @@ get_header(); ?>
 			<?php endif; ?>
 
 		<section class="luxury-car-container bentley centered">
+		</section>
+
+		<section class="contact-form-container l-container centered">
+			<?php echo do_shortcode('[contact-form-7 id="26" title="Contact Form"]'); ?>
 		</section>
 		
 		</main><!-- #main -->

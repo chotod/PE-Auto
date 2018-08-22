@@ -6,9 +6,15 @@
 .category-heading {
     height: 80px;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 1.2rem;
     margin-bottom: 2.5rem;
     font-family: 'Times New Roman', serif;
@@ -37,29 +43,21 @@
     background: $color__background-medgold;
     z-index: -1;
     -webkit-transform: skew(0deg, 6deg);
-    -moz-transform: skew(0deg, 6deg);
     -ms-transform: skew(0deg, 6deg);
-    -o-transform: skew(0deg, 6deg);
     transform: skew(0deg, 6deg);
     @include media($tablet) {
         -webkit-transform: skew(0deg, 4.5deg);
-        -moz-transform: skew(0deg, 4.5deg);
         -ms-transform: skew(0deg, 4.5deg);
-        -o-transform: skew(0deg, 4.5deg);
         transform: skew(0deg, 4.5deg);
     }
     @include media($desktop) {
         -webkit-transform: skew(0deg, 6.5deg);
-        -moz-transform: skew(0deg, 6.5deg);
         -ms-transform: skew(0deg, 6.5deg);
-        -o-transform: skew(0deg, 6.5deg);
         transform: skew(0deg, 6.5deg);
     }
     @include media($wide) {
         -webkit-transform: skew(0deg, 5.5deg);
-        -moz-transform: skew(0deg, 5.5deg);
         -ms-transform: skew(0deg, 5.5deg);
-        -o-transform: skew(0deg, 5.5deg);
         transform: skew(0deg, 5.5deg);
     }
 }
@@ -73,29 +71,21 @@
     background: $color__background-medgold;
     z-index: -1;
     -webkit-transform: skew(0deg, -6deg);
-    -moz-transform: skew(0deg, -6deg);
     -ms-transform: skew(0deg, -6deg);
-    -o-transform: skew(0deg, -6deg);
     transform: skew(0deg, -6deg);
     @include media($tablet) {
         -webkit-transform: skew(0deg, -4.5deg);
-        -moz-transform: skew(0deg, -4.5deg);
         -ms-transform: skew(0deg, -4.5deg);
-        -o-transform: skew(0deg, -4.5deg);
         transform: skew(0deg, -4.5deg);
     }
     @include media($desktop) {
         -webkit-transform: skew(0deg, -6.5deg);
-        -moz-transform: skew(0deg, -6.5deg);
         -ms-transform: skew(0deg, -6.5deg);
-        -o-transform: skew(0deg, -6.5deg);
         transform: skew(0deg, -6.5deg);
     }
     @include media($wide) {
         -webkit-transform: skew(0deg, -5.5deg);
-        -moz-transform: skew(0deg, -5.5deg);
         -ms-transform: skew(0deg, -5.5deg);
-        -o-transform: skew(0deg, -5.5deg);
         transform: skew(0deg, -5.5deg);
     }
 }
@@ -114,8 +104,11 @@
 .cars-gallery-container {
     @include media($desktop) {
         max-width: 1400px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         margin: 0 auto;
     }
 }
@@ -127,7 +120,7 @@
     margin: 0 auto;
     margin-bottom: 10px;
     @include media($tablet) {
-        height: 300px;
+        height: 240px;
         margin-bottom: 1rem;
     }
     @include media($desktop) {
@@ -150,9 +143,16 @@
     background: rgba(0,0,0,0.7);
     padding: 3px 15px 0px;
     text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     p {
         margin: 0;
     }

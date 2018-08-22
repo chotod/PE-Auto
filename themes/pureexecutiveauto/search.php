@@ -7,32 +7,47 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<section class="error-404 not-found">
+				<header class="page-header">
+					<h1>Oops! That page can't be found.</h1>
+				</header><!-- .page-header -->
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+				<div class="page-content">
+					<?php $url = home_url(); ?>
+					<p>It looks like nothing was found at this location. Maybe try one of the links below or return <a href="<?php echo esc_url( $url ); ?>">Home</a></p>
+				</div><!-- .page-content -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content', 'search' ); ?>
-
-			<?php endwhile; ?>
-
-			<?php peauto_numbered_pagination(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
+				<div class="featured-portfolio-wrapper">
+                    <?php $args = array( 'category_name' => 'featured-portfolio', 'post_type' =>  'post', 'posts_per_page' => '3' ); 
+                    $postslist = get_posts( $args );    
+                    foreach ($postslist as $post) :  setup_postdata($post); ?> 
+                        <div class="featured-car-wrapper">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail('large'); ?>
+                            </a>
+                            <div class="featured-label-wrapper">
+                                <div>
+                                    <p class="car-title"><?php the_title(); ?></p>
+                                    <?php if(get_field('car_subtitle')) : ?>
+                                        <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
+                                    <?php endif; ?>
+                                    <?php if(get_field('car_price')) : ?>
+                                        <p class="car-price"><?php echo the_field('car_price'); ?></p>
+                                    <?php else: ?>
+                                        <p class="car-price">coming soon</p>
+                                    <?php endif; ?>
+                                </div>
+                                <a href="<?php the_permalink(); ?>"><p class="more-info">i</p></a>
+                            </div><!-- .featured-label-wrapper -->
+                        </div>
+                    <?php endforeach; wp_reset_postdata();?>
+                </div>
+			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

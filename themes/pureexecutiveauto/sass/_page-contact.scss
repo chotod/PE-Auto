@@ -3,25 +3,45 @@
     background: url(../../assets/contact-map-lg.svg) no-repeat;
     background-size: cover;
     background-position: 50% 0;
+    @include media($beehive) {
+        background-position: 50% 60%;
+        height: 300px;
+    }
+    @include media($tablet) {
+        background-position: 50% 80%;
+        height: 350px
+    }
     @include media($desktop) {
         height: 500px;
-        background-position: 50% 67%;
     }
 }
 
 .company-contact-container {
     width: 200px;
     height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin: 0 auto;
     @include media($tablet) {
         width: 600px;
-        flex-direction: row;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     >div {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     p {
@@ -35,14 +55,16 @@
 
 .company-address-wrapper {
     img {
-        align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
     }
 }
 
 .address-info-wrapper {
     padding-top: 0.3rem;
     img {
-        align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
     }
 }
 
@@ -56,7 +78,10 @@
 
 .company-telephone-wrapper {
     @include media($tablet) {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     a {
         font-size: 18px;

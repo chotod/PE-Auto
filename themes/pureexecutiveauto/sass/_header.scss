@@ -2,15 +2,18 @@
     width: 101%;
     height: 110px;
     background: rgba(0,0,0,0.7);
-    clip-path: polygon(0 0,100% 0,100% 75%,100% 54%,49.5% 74%,0 54%,0 75%);
+    -webkit-clip-path: polygon(0 0,100% 0,100% 75%,100% 54%,49.5% 74%,0 54%,0 75%);
+            clip-path: polygon(0 0,100% 0,100% 75%,100% 54%,49.5% 74%,0 54%,0 75%);
     position: fixed;
     top: 0;
     z-index: 1;
     @include media($tablet) {
-        clip-path: polygon(0 0,100% 0,100% 75%,100% 58%,49.5% 85%,0 58%,0 75%);
+        -webkit-clip-path: polygon(0 0,100% 0,100% 75%,100% 58%,49.5% 85%,0 58%,0 75%);
+                clip-path: polygon(0 0,100% 0,100% 75%,100% 58%,49.5% 85%,0 58%,0 75%);
     }
     @include media($desktop) {
-        clip-path: polygon(0 0,100% 0,100% 75%,100% 46%,49.5% 100%,0 46%,0 75%);
+        -webkit-clip-path: polygon(0 0,100% 0,100% 75%,100% 46%,49.5% 100%,0 46%,0 75%);
+                clip-path: polygon(0 0,100% 0,100% 75%,100% 46%,49.5% 100%,0 46%,0 75%);
     }
 }
 
@@ -34,9 +37,11 @@
 }
 
 .responsive-menu-button {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     &:active, &:hover, &:focus {
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 }
 
@@ -49,8 +54,11 @@
         position: absolute;
         top: 1.3rem;
         ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
             li:nth-of-type(3) {
                 margin-right: 10rem;
             }

@@ -16,6 +16,8 @@ get_header(); ?>
                         <p>Portfolio</p>
                     <?php elseif(is_category( 'sold-portfolio' )): ?>
                         <p>Sold Portfolio</p>
+                    <?php elseif(is_category( 'featured-portfolio' )): ?>
+                        <p>Featured Portfolio</p>
                     <?php endif; ?>
                 </div>
                 <div class="divider">
@@ -32,18 +34,18 @@ get_header(); ?>
 
                             <div class="car-wrapper">
                                 <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail('large'); ?>
-                                <div class="label-wrapper">
-                                    <p class="car-title"><?php the_title(); ?></p>
-                                    <?php if(get_field('car_subtitle')) : ?>
-                                        <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
-                                    <?php endif; ?>
-                                    <?php if(get_field('car_price')) : ?>
-                                        <p class="car-price"><?php echo the_field('car_price'); ?></p>
-                                    <?php else: ?>
-                                        <p class="car-price">coming soon</p>
-                                    <?php endif; ?>
-                                </div>
+                                    <?php the_post_thumbnail('large'); ?>
+                                    <div class="label-wrapper">
+                                        <p class="car-title"><?php the_title(); ?></p>
+                                        <?php if(get_field('car_subtitle')) : ?>
+                                            <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
+                                        <?php endif; ?>
+                                        <?php if(get_field('car_price')) : ?>
+                                            <p class="car-price"><?php echo the_field('car_price'); ?></p>
+                                        <?php else: ?>
+                                            <p class="car-price">coming soon</p>
+                                        <?php endif; ?>
+                                    </div>
                                 </a>
                             </div>
                         <?php endwhile; wp_reset_query(); ?>
@@ -52,23 +54,48 @@ get_header(); ?>
                 <?php elseif(is_category( 'sold-portfolio' )): ?>
 
                     <div class="cars-gallery-container">
-                    <?php query_posts( array ( 'category_name' => 'sold-portfolio' ) );
+                        <?php query_posts( array ( 'category_name' => 'sold-portfolio' ) );
                         while (have_posts()) : the_post(); ?>
 
                             <div class="car-wrapper">
                                 <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail('large'); ?>
-                                <div class="label-wrapper">
-                                    <p class="car-title"><?php the_title(); ?></p>
-                                    <?php if(get_field('car_subtitle')) : ?>
-                                        <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
-                                    <?php endif; ?>
-                                    <?php if(get_field('car_price')) : ?>
-                                        <p class="car-price"><?php echo the_field('car_price'); ?></p>
-                                    <?php else: ?>
-                                        <p class="car-price">sold</p>
-                                    <?php endif; ?>
-                                </div>
+                                    <?php the_post_thumbnail('large'); ?>
+                                    <div class="label-wrapper">
+                                        <p class="car-title"><?php the_title(); ?></p>
+                                        <?php if(get_field('car_subtitle')) : ?>
+                                            <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
+                                        <?php endif; ?>
+                                        <?php if(get_field('car_price')) : ?>
+                                            <p class="car-price"><?php echo the_field('car_price'); ?></p>
+                                        <?php else: ?>
+                                            <p class="car-price">sold</p>
+                                        <?php endif; ?>
+                                    </div>
+                                </a>
+                            </div>
+                        <?php endwhile; wp_reset_query(); ?>
+                    </div>
+
+                <?php elseif(is_category( 'featured-portfolio' )): ?>
+
+                    <div class="cars-gallery-container">
+                        <?php query_posts( array ( 'category_name' => 'featured-portfolio' ) );
+                        while (have_posts()) : the_post(); ?>
+
+                            <div class="car-wrapper">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail('large'); ?>
+                                    <div class="label-wrapper">
+                                        <p class="car-title"><?php the_title(); ?></p>
+                                        <?php if(get_field('car_subtitle')) : ?>
+                                            <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
+                                        <?php endif; ?>
+                                        <?php if(get_field('car_price')) : ?>
+                                            <p class="car-price"><?php echo the_field('car_price'); ?></p>
+                                        <?php else: ?>
+                                            <p class="car-price">coming soon</p>
+                                        <?php endif; ?>
+                                    </div>
                                 </a>
                             </div>
                         <?php endwhile; wp_reset_query(); ?>
@@ -78,6 +105,10 @@ get_header(); ?>
             </section>
 
             <section class="luxury-car-container bentley"></section>
+
+            <section class="contact-form-container l-container centered">
+			    <?php echo do_shortcode('[contact-form-7 id="26" title="Contact Form"]'); ?>
+		    </section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

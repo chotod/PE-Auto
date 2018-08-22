@@ -14,39 +14,39 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h1>
+					<h1>Oops! That page can't be found.</h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php echo esc_html( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?' ); ?></p>
-
-					<?php get_search_form(); ?>
-
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-					<?php if ( peauto_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php echo esc_html( 'Most Used Categories' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
-
-					<?php
-						$archive_content = '<p>' . sprintf( esc_html( 'Try looking in the monthly archives. %1$s' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
-
+					<?php $url = home_url(); ?>
+					<p>It looks like nothing was found at this location. Maybe try one of the links below or return <a href="<?php echo esc_url( $url ); ?>">Home</a></p>
 				</div><!-- .page-content -->
+
+				<div class="featured-portfolio-wrapper">
+                    <?php $args = array( 'category_name' => 'featured-portfolio', 'post_type' =>  'post', 'posts_per_page' => '3' ); 
+                    $postslist = get_posts( $args );    
+                    foreach ($postslist as $post) :  setup_postdata($post); ?> 
+                        <div class="featured-car-wrapper">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail('large'); ?>
+                            </a>
+                            <div class="featured-label-wrapper">
+                                <div>
+                                    <p class="car-title"><?php the_title(); ?></p>
+                                    <?php if(get_field('car_subtitle')) : ?>
+                                        <p class="car-subtitle"><?php echo the_field('car_subtitle'); ?></p>
+                                    <?php endif; ?>
+                                    <?php if(get_field('car_price')) : ?>
+                                        <p class="car-price"><?php echo the_field('car_price'); ?></p>
+                                    <?php else: ?>
+                                        <p class="car-price">coming soon</p>
+                                    <?php endif; ?>
+                                </div>
+                                <a href="<?php the_permalink(); ?>"><p class="more-info">i</p></a>
+                            </div><!-- .featured-label-wrapper -->
+                        </div>
+                    <?php endforeach; wp_reset_postdata();?>
+                </div>
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
