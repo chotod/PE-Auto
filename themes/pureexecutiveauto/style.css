@@ -1037,12 +1037,12 @@ object {
     margin-bottom: 5.5rem;
     padding: 0.5rem 2rem;
     border: 1px solid #D8D8D8;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.45);
     color: #D8D8D8;
     text-decoration: none;
     text-transform: uppercase; }
     .hero-container a:hover {
-      background: rgba(0, 0, 0, 0.6); }
+      background: rgba(0, 0, 0, 0.55); }
 
 .featured-portfolio-container {
   margin-bottom: 6rem; }

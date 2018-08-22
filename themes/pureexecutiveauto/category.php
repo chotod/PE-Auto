@@ -18,6 +18,8 @@ get_header(); ?>
                         <p>Sold Portfolio</p>
                     <?php elseif(is_category( 'featured-portfolio' )): ?>
                         <p>Featured Portfolio</p>
+                        <?php elseif(is_category( 'uncategorized' )): ?>
+                        <p>Uncategorized</p>
                     <?php endif; ?>
                 </div>
                 <div class="divider">
