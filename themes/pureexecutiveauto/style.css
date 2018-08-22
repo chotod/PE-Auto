@@ -1013,7 +1013,7 @@ object {
 .hero-container {
   width: 100%;
   height: 720px;
-  background: url(../../assets/home-mobile-heroimg.svg) no-repeat;
+  background: url(../../assets/mobile-home-img.jpg) no-repeat;
   background-size: cover;
   background-position: 1px;
   display: -webkit-box;
@@ -1025,14 +1025,14 @@ object {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end; }
-  @media only screen and (min-width: 450px) {
-    .hero-container {
-      height: 850px; } }
   @media only screen and (min-width: 750px) {
     .hero-container {
-      background: url(../../assets/home-bg.jpg) no-repeat;
-      background-position: 60% 0%;
-      height: 675px; } }
+      background: url(../../assets/desktop-home.jpg) no-repeat;
+      background-size: cover;
+      background-position: -123px 0; } }
+  @media only screen and (min-width: 1024px) {
+    .hero-container {
+      background-position: 0 0; } }
   .hero-container a {
     margin-bottom: 5.5rem;
     padding: 0.5rem 2rem;

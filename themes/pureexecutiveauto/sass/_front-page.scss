@@ -5,7 +5,7 @@
 .hero-container {
     width: 100%;
     height: 720px;
-    background: url(../../assets/home-mobile-heroimg.svg) no-repeat;
+    background: url(../../assets/mobile-home-img.jpg) no-repeat;
     background-size: cover;
     background-position: 1px;
     display: -webkit-box;
@@ -18,12 +18,14 @@
         -ms-flex-align: end;
             align-items: flex-end;
     @include media($beehive) {
-        height: 850px;
     }
     @include media($tablet) {
-        background: url(../../assets/home-bg.jpg) no-repeat;
-        background-position: 60% 0%;
-        height: 675px;
+        background: url(../../assets/desktop-home.jpg) no-repeat;
+        background-size: cover;
+        background-position: -123px 0;
+    }
+    @include media($desktop) {
+        background-position: 0 0;
     }
     a {
         margin-bottom: 5.5rem;
