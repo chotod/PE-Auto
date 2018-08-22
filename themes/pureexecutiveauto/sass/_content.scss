@@ -138,6 +138,7 @@ body {
 		background: $color__background-forms;
 		border: none;
 		color: $color__accent-softwhite;
+		padding-left: 0.5rem;
 		&:focus {
 			outline: none;
 			color: $color__accent-softwhite;
