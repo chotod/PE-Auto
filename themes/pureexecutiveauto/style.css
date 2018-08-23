@@ -1014,7 +1014,7 @@ object {
 .hero-container {
   width: 100%;
   height: 720px;
-  background: url(../../assets/mobile-home-img.jpg) no-repeat;
+  background: url(../../assets/mobile-home.png) no-repeat;
   background-size: cover;
   background-position: 1px;
   display: -webkit-box;
@@ -1028,7 +1028,7 @@ object {
   align-items: flex-end; }
   @media only screen and (min-width: 750px) {
     .hero-container {
-      background: url(../../assets/desktop-home.jpg) no-repeat;
+      background: url(../../assets/desktop-home.png) no-repeat;
       background-size: cover;
       background-position: -123px 0; } }
   @media only screen and (min-width: 1024px) {
