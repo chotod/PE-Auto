@@ -34,6 +34,9 @@
         background-position: 0 -150px;
     }
     @include media($desktop-xlarge) {
+        background-position: 0 -180px;
+    }
+    @include media($desktop-xxlarge) {
         background-position: 0 -310px;
     }
     a {
