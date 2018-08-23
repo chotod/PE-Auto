@@ -1039,7 +1039,7 @@ object {
   align-items: flex-end; }
   @media only screen and (min-width: 750px) {
     .hero-container {
-      background: url(../../assets/desktop-home.png) no-repeat;
+      background: url(../../assets/desktop-home.jpg) no-repeat;
       background-size: cover;
       background-position: -123px 0; } }
   @media only screen and (min-width: 1024px) {
