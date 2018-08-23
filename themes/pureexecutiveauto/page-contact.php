@@ -11,7 +11,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
             <section class="contact-map-container">
-                <!-- <?php echo the_field('contact_google_maps'); ?> -->
             </section>
 
             <section class="company-contact-container r-container">
