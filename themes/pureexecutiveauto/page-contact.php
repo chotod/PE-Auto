@@ -11,7 +11,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
             <section class="contact-map-container">
-                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/contact-map.svg" alt="Google Map" /> -->
                 <!-- <?php echo the_field('contact_google_maps'); ?> -->
             </section>
 
