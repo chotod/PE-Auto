@@ -1045,6 +1045,15 @@ object {
   @media only screen and (min-width: 1024px) {
     .hero-container {
       background-position: 0 0; } }
+  @media only screen and (min-width: 1500px) {
+    .hero-container {
+      background-position: 0 -60px; } }
+  @media only screen and (min-width: 1700px) {
+    .hero-container {
+      background-position: 0 -150px; } }
+  @media only screen and (min-width: 2000px) {
+    .hero-container {
+      background-position: 0 -310px; } }
   .hero-container a {
     margin-bottom: 5.5rem;
     padding: 0.5rem 2rem;
@@ -1423,7 +1432,7 @@ object {
 
 .contact-map-container {
   height: 280px;
-  background: url(../../assets/contact-map-lg.svg) no-repeat;
+  background: url(../../assets/contact-map.png) no-repeat;
   background-size: cover;
   background-position: 50% 0; }
   @media only screen and (min-width: 450px) {

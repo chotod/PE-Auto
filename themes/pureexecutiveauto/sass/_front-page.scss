@@ -27,6 +27,15 @@
     @include media($desktop) {
         background-position: 0 0;
     }
+    @include media($desktop-wide) {
+        background-position: 0 -60px;
+    }
+    @include media($desktop-large) {
+        background-position: 0 -150px;
+    }
+    @include media($desktop-xlarge) {
+        background-position: 0 -310px;
+    }
     a {
         margin-bottom: 5.5rem;
         padding: 0.5rem 2rem;
