@@ -1048,6 +1048,9 @@ object {
   @media only screen and (min-width: 1500px) {
     .hero-container {
       background-position: 0 -60px; } }
+  @media only screen and (min-width: 1600px) {
+    .hero-container {
+      background-position: 0 -120px; } }
   @media only screen and (min-width: 1700px) {
     .hero-container {
       background-position: 0 -150px; } }

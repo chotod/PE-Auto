@@ -30,6 +30,9 @@
     @include media($desktop-wide) {
         background-position: 0 -60px;
     }
+    @include media($desktop-xwide) {
+        background-position: 0 -120px;
+    }
     @include media($desktop-large) {
         background-position: 0 -150px;
     }
