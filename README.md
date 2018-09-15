@@ -18,5 +18,3 @@ Mobile Homepage             |  Mobile Porfolio
  * Gulp
  * Wordpress
  * PHP
-
-
