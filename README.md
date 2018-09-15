@@ -5,6 +5,8 @@ A Wordpress website for luxury and exotic cars.
 ![PEA screenshot1](/themes/pureexecutiveauto/assets/pea-homedesktop.png)
 ![PEA screenshot2](/themes/pureexecutiveauto/assets/pea-portfoliodesktop.png)
 
+
+Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
 ![](/themes/pureexecutiveauto/assets/pea-homemobile.png)  |  ![](/themes/pureexecutiveauto/assets/pea-portfoliomobile.png)
 
