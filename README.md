@@ -1,4 +1,4 @@
-# Pure Executive Auto Webite
+# Pure Executive Auto Website
 
 A Wordpress website for luxury and exotic cars.
 
