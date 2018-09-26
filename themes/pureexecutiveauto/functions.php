@@ -165,3 +165,12 @@ function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
 add_action('get_header', 'remove_admin_login_header');
+
+
+/**
+ *  Apply JetPack Photon To Advanced Custom Fields Images
+ */
+function cdn_attachments_urls($url, $post_id) {
+    return str_replace('https://pureexecutiveauto.ca/wp-content/uploads', 'https://i0.wp.com/pureexecutiveauto.ca/wp-content/uploads', $url);
+}
+add_filter('acf/format_value/type=image', 'cdn_attachments_urls', PHP_INT_MAX, 2);
