@@ -7,7 +7,7 @@ $(document).ready(function() {
     speed:500,
     auto:false,
     loop:true,       
-    onSliderLoad: function() {
+    onSliderLoad: function(el) {
       $('#light-slider').removeClass('cS-hidden');
     }  
   });
