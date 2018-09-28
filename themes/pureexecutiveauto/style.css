@@ -1415,6 +1415,17 @@ object {
   max-width: 800px;
   margin: 0 auto; }
 
+.lightSlider li:hover {
+  cursor: pointer; }
+
+.lg-outer {
+  top: 3rem;
+  height: 80%; }
+  @media only screen and (min-width: 1024px) {
+    .lg-outer {
+      top: 0;
+      height: 100%; } }
+
 .single-car-title, .specs-heading {
   font-size: 22px;
   color: #B2994C; }

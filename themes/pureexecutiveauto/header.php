@@ -15,6 +15,9 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.5/css/lightslider.min.css" rel="stylesheet" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.5/js/lightslider.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/css/lightgallery.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/js/lightgallery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/lg-thumbnail/1.0.1/lg-thumbnail.min.js"></script>
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicon.ico" type="image/png" />
     	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicon.ico" type="image/png" />
 

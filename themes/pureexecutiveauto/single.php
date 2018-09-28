@@ -41,7 +41,9 @@ get_header(); ?>
 				if($rows) : ?>
 					<ul id="light-slider">
 						<?php foreach($rows as $row) : ?>
-							<li data-thumb="<?php echo $row['photo_gallery'];?>"><img src="<?php echo $row['photo_gallery'];?>"></li>
+							<li data-thumb="<?php echo $row['photo_gallery'];?>" data-src="<?php echo $row['photo_gallery'];?>">
+								<img src="<?php echo $row['photo_gallery'];?>">
+							</li>
 						<?php endforeach; ?>
 					</ul>
 				<?php endif; ?>
