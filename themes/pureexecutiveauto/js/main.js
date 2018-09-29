@@ -13,6 +13,7 @@ $(document).ready(function() {
       el.lightGallery({
         selector: '#light-slider .lslide',
         speed: 800,
+        preload: 1,
       });
     }  
   });
