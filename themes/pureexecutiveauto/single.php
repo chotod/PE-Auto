@@ -37,14 +37,19 @@ get_header(); ?>
             </section>
 
 			<section class="single-car-container">
-				<?php $rows = get_field('car_photos');
-				if($rows) : ?>
+				<?php if(have_rows('car_photos')): ?>
 					<ul id="light-slider">
-						<?php foreach($rows as $row) : ?>
-							<li data-thumb="<?php echo $row['photo_gallery'];?>" data-src="<?php echo $row['photo_gallery'];?>">
-								<img src="<?php echo $row['photo_gallery'];?>">
+						<?php while(have_rows('car_photos')): the_row();
+							$image = get_sub_field('photo_gallery'); 
+							$image_array_thumb = wp_get_attachment_image_src($image, 'thumbnail');
+							$image_array_full = wp_get_attachment_image_src($image, 'full');
+							$image_url_thumb = $image_array_thumb[0];
+							$image_url_full = $image_array_full[0]; ?>
+
+							<li data-thumb="<?php echo $image_url_thumb; ?>" data-src="<?php echo $image_url_full; ?>">
+								<?php echo wp_get_attachment_image($image, "full"); ?>
 							</li>
-						<?php endforeach; ?>
+						<?php endwhile; ?>
 					</ul>
 				<?php endif; ?>
 			</section>

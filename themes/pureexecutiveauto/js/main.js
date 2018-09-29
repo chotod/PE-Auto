@@ -14,6 +14,7 @@ $(document).ready(function() {
         selector: '#light-slider .lslide',
         speed: 800,
         preload: 1,
+        exThumbImage: 'data-thumb',
       });
     }  
   });
