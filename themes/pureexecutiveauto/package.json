@@ -4,6 +4,7 @@
   "description": "A Wordpress theme for Pure Executive Auto.",
   "main": "gulpfile.js",
   "dependencies": {
+    "jquery": "^3.4.1",
     "lg-autoplay": "^1.0.4",
     "lg-fullscreen": "^1.0.1",
     "lg-hash": "^1.0.4",
@@ -13,7 +14,9 @@
     "lg-video": "^1.2.2",
     "lg-zoom": "^1.1.0",
     "lightgallery": "^1.6.11",
-    "lightslider": "^1.1.6"
+    "lightslider": "^1.1.6",
+    "lodash": "^4.17.11",
+    "tar": "^4.4.8"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
